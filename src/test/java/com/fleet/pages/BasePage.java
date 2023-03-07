@@ -104,8 +104,6 @@ public abstract class BasePage {
     public WebElement questionIcon;
 
 
-    @FindBy(xpath = "(//i[@class='fa-asterisk menu-icon'])[1]")
-    public WebElement fleet;
 
 
 
