@@ -15,4 +15,4 @@ Feature: As a user I want to write the “Description” when I create a calenda
       | userType        |
       | "sales manager" |
       | "store manager" |
-      | "driver         |
+      | "driver"        |
