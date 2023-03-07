@@ -36,7 +36,8 @@ public class US7_StepDefs {
     @Then("the user verifies all checkboxes are checked")
     public void theUserVerifiesAllCheckboxesAreChecked() {
 
-        Assert.assertTrue(vehiclesModulePage.all_checkboxes.isSelected());
+        vehiclesModulePage.checkboxIsSelected();
+        //Assert.assertTrue(vehiclesModulePage.all_checkboxes.isSelected());
 
     }
 
