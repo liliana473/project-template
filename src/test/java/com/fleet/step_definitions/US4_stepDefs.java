@@ -20,11 +20,11 @@ public class US4_stepDefs {
 
     @When("the user navigates to {string} - {string} module")
     public void theUserNavigatesToModule(String tab, String module) {
-        dashboardPage.waitUntilLoaderScreenDisappear();
 
+        dashboardPage.waitUntilLoaderScreenDisappear();
         dashboardPage.navigateToModule(tab, module);
-
         dashboardPage.waitUntilLoaderScreenDisappear();
+
         BrowserUtils.sleep(5);
 
     }
