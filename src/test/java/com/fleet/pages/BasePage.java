@@ -110,8 +110,11 @@ public abstract class BasePage {
     public WebElement activities;
 
 
+    @FindBy(xpath = "//a[@href='/entity/Extend_Entity_VehicleContract']")
+    public WebElement VehicleContractModule;
 
-
+    @FindBy(xpath = "//div[text()='You do not have permission to perform this action.']")
+    public WebElement YouHaveNoPermissionMessage;
 
 
 }
