@@ -1,4 +1,4 @@
-@feyza
+
 Feature: As a user, I should be accessing all the main modules of the app.
   Accounts are : Sales Manager , Store Manager , Drivers
 
@@ -35,19 +35,3 @@ Feature: As a user, I should be accessing all the main modules of the app.
       | Activities |
       | System     |
 
-
-
-
-
- # Scenario Outline: US1AC2TC2 Verify that drivers  should view 4 module names.
-   # Given the user logged in as "driver"
-  #  And the users are on the home page
-  #  Then verify the users see  "<modules>" below
-
-
-  #  Examples:
-  #    | modules            |
-  #    | Fleet              |
-  #    | Customers          |
-     # | Activities         |
-  #    | System             |

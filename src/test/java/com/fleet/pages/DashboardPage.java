@@ -11,11 +11,10 @@ public class DashboardPage extends BasePage{
 
 public  DashboardPage(){
 
-  //  PageFactory.initElements(Driver.getDriver(),this);
+
 
 }
-//@FindBy(css = "span[class='title title-level-1']") //same locator for all of them
-   // public List<WebElement> mainModules;
+
 
 
 
