@@ -104,6 +104,11 @@ public abstract class BasePage {
     public WebElement questionIcon;
 
 
+    @FindBy(xpath = "(//i[@class='fa-asterisk menu-icon'])[1]")
+    public WebElement fleet;
+    @FindBy(xpath = "(//i[@class='fa-puzzle-piece menu-icon'])")
+    public WebElement activities;
+
 
     @FindBy(xpath = "//a[@href='/entity/Extend_Entity_VehicleContract']")
     public WebElement VehicleContractModule;
