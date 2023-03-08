@@ -1,4 +1,3 @@
-
 Feature: As a user, I should be accessing all the main modules of the app.
   Accounts are : Sales Manager , Store Manager , Drivers
 
@@ -18,11 +17,10 @@ Feature: As a user, I should be accessing all the main modules of the app.
       | Reports & Segments |
       | System             |
 
-  Examples:
-    | userType             |
-    | sales manager             |
-    | store manager             |
-
+    Examples:
+      | userType      |
+      | sales manager |
+      | store manager |
 
 
   Scenario: US1AC2TC2 Verify that Store and sales managers should view 8 module names.
