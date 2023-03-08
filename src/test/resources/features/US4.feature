@@ -9,7 +9,7 @@ Feature: User able to access to Vehicle contracts page
 
   Scenario: US4AC1TC1 Verify that user can access the Vehicle contracts page
     Given the user logged in as "store manager"
-    When the user navigates to "Fleet" - "Vehicle Contracts" module
+    When the user navigates to "Fleet" - "Vehicle Contracts"
     And the title contains "All - Vehicle Contract - Entities - System - Car - Entities - System"
     Then the page url is "https://qa.translantik.com/entity/Extend_Entity_VehicleContract"
 
@@ -17,7 +17,7 @@ Feature: User able to access to Vehicle contracts page
 
   Scenario: US4AC1TC1 Verify that user can access the Vehicle contracts page
     Given the user logged in as "sales manager"
-    When the user navigates to "Fleet" - "Vehicle Contracts" module
+    When the user navigates to "Fleet" - "Vehicle Contracts"
     Then the title contains "All - Vehicle Contract - Entities - System - Car - Entities - System"
     Then the page url is "https://qa.translantik.com/entity/Extend_Entity_VehicleContract"
 
@@ -26,7 +26,7 @@ Feature: User able to access to Vehicle contracts page
 
   Scenario: US4AC2TC1 Verify Drivers can NOT access the Vehicle contracts page
     Given the user logged in as "driver"
-    When the user navigates to "Fleet" - "Vehicle Contracts" module
+    When the user navigates to "Fleet" - "Vehicle Contracts"
     Then users see an error message as: "You do not have permission to perform this action."
 
 
