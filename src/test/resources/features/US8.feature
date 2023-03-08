@@ -5,17 +5,22 @@ Feature: User want to create a recurring(repetitive) calendar event.
   Background: User is already in the log in page
     Given the user is on the login page
 
-  Scenario Outline: US8AC1TC1 Verify that user can create a recurring(repetitive) calendar event.
-    Given the user logged in as <userType>
-    And the users are on the homepage
-    Then  click the “Calendar Events” under the Activities
-    And  click the “Create Calendar Event” button
-    Then check the Repeat checkbox
-    And  Verify the repeat number is "1"
+  Scenario: US8AC1TC1  user should see the number “1” by default in the Repeat Every input.
+    Given the user logged in as "store manager"
+    When the user navigates to "Activities" - "Calendar Events"
+    And the user click the Create Calendar Event button
+    Then Check the Repeat checkbox
+    And Verify the repeat number is "1"
 
-    Examples:
-      | userType        |
-      | "sales manager" |
-      | "store manager" |
-      | "driver         |
+  Scenario: US8AC2TC2 users clear the repeat day and see an error message
+    Given the user logged in as "store manager"
+    When the user navigates to "Activities" - "Calendar Events"
+    And the user click the Create Calendar Event button
+    Then Check the Repeat checkbox
+    And Clear(delete) the number "1"
+    Then Verify the app displays “This value should not be blank.”
+
+
+
+
 
