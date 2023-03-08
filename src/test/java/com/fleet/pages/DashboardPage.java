@@ -9,14 +9,6 @@ import java.util.List;
 
 public class DashboardPage extends BasePage{
 
-public  DashboardPage(){
-
-
-
-}
-
-
-
 
 
 }
