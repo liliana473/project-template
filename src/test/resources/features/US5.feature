@@ -22,6 +22,9 @@ Feature: View columns on Vehicle model information
 
   Scenario: US5AC2TC1 verify that user can access Vehicle Model page
     Given the user logged in as "driver"
+    And  the user navigates to "Fleet" - "Vehicles Model"
+    Then users see an error message as: "You do not have permission to perform this action."
+
 
 
 
