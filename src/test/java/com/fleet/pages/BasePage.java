@@ -8,7 +8,6 @@ import com.fleet.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -103,7 +102,11 @@ public abstract class BasePage {
     @FindBy(xpath = "//i[@title='Get help']")
     public WebElement questionIcon;
 
+    @FindBy(xpath = "//span[normalize-space()='Vehicle Odometer']")
+    public WebElement VehicleOdometerButton;
 
+    @FindBy(xpath = "//div[text()='You do not have permission to perform this action.']")
+    public WebElement YouHaveNoPermissionMessage;
 
 
 
