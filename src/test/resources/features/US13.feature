@@ -8,6 +8,11 @@ Feature:user able to manage filters on the Vehicle Costs page. (Web table and ch
     Given the user logged in as "<UserType>"
     When the user navigates to "Fleet" - "Vehicle Costs"
     Then the user should see expected "<columns>" as below
+    Examples:
+      | columns     |
+      | TYPE        |
+      | TOTAL PRICE |
+      | DATE        |
 
     Examples:
       | UserType      |
@@ -15,15 +20,11 @@ Feature:user able to manage filters on the Vehicle Costs page. (Web table and ch
       | sales manager |
       | driver        |
 
-    Examples:
-      | columns     |
-      | TYPE        |
-      | TOTAL PRICE |
-      | DATE        |
-
     Scenario Outline: US13AC2TC1 users check the first checkbox to select all the Vehicle Cost
       Given the user logged in as "<UserType>"
       When the user navigates to "Fleet" - "Vehicle Costs"
+      And the user clicks the first checkbox
+      Then Verify all the vehicle costs are checked
 
 
 
