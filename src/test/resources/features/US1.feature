@@ -25,7 +25,7 @@ Feature: As a user, I should be accessing all the main modules of the app.
 
 
 @B28G30-153
-  Scenario: US1AC2TC2 Verify that Drivers should view 4 module names
+  Scenario: US1AC2TC2 Verify that Driver should view 4 module names
     Given the user logged in as "driver"
     Then verify the users see below modules
 
