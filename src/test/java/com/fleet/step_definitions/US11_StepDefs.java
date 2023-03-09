@@ -15,11 +15,6 @@ public class US11_StepDefs {
     DashboardPage dashboardPage = new DashboardPage();
     Actions actions = new Actions(Driver.getDriver());
 
-    @Then("users see an error message as: {string}")
-    public void users_see_an_error_message_as(String NoPermissionMessage) {
-        BrowserUtils.sleep(10);
-        dashboardPage.YouHaveNoPermissionMessage.isDisplayed();
-    }
 
     String expectedDefaultPageNum = "1";
 
