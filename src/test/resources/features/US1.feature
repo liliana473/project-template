@@ -19,9 +19,9 @@ Feature: As a user, I should be accessing all the main modules of the app.
       | System             |
 
   Examples:
-    | userType             |
-    | sales manager             |
-    | store manager             |
+    | userType      |
+    | sales manager |
+    | store manager |
 
 
 @B28G30-153
