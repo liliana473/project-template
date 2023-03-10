@@ -6,6 +6,10 @@ import com.fleet.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class US14_StepDefs {
 
@@ -22,29 +26,34 @@ public class US14_StepDefs {
 
 
     @And("verify {string} options are checked by default")
-    public void verifyOptionsAreCheckedByDefault(String arg0) {
-      // marketingPage.ManageFilter.getSize();
+    public void verifyOptionsAreCheckedByDefault(String numOptions) {
 
-        Assert.assertTrue(vehiclesModulePage.all_checkboxes.isSelected());
+    vehiclesModulePage.checkboxIsSelected();
+
 
         }
 
-     
 
     @And("uncheck one or more filter options")
     public void uncheckOneOrMoreFilterOptions() {
         marketingPage.nameCheckbox.click();
         marketingPage.codeCheckbox.click();
-        marketingPage.startDateCheckbox.click();
+
 
     }
 
     @Then("verify one or more options are unchecked")
     public void verifyOneOrMoreOptionsAreUnchecked() {
-    //    Assert.assertTrue();
+        Assert.assertFalse(marketingPage.nameCheckbox.isSelected()&&marketingPage.checkBoxes.isSelected());
+
+
+        }
+
+
+
 
     }
 
 
 
-}
+
