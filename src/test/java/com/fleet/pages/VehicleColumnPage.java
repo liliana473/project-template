@@ -12,8 +12,6 @@ public class VehicleColumnPage extends BasePage {
     public List<WebElement> columnOptions;
 
 
-    @FindBy(css="div[class='message']")
-    public WebElement message;
 
 }
 
