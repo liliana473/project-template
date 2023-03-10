@@ -10,19 +10,14 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class US13_StepDefs {
 
     VehicleCostPage vehicleCostPage = new VehicleCostPage();
-    VehiclesModulePage vehiclesModulePage= new VehiclesModulePage();
 
-    @Then("the user should see expected {string} as below")
-    public void the_user_should_see_expected_as_below(List<String> HeaderNames) {
-        List<String> actualOptions = BrowserUtils.getElementsText(vehicleCostPage.allVehicleCostCheckBoxHeader);
-        Assert.assertEquals(HeaderNames,actualOptions);
-
-    }
     @When("the user clicks the first checkbox")
     public void the_user_clicks_the_first_checkbox() {
        BrowserUtils.sleep(3);
@@ -31,5 +26,20 @@ public class US13_StepDefs {
     }
 
 
+    @Then("the user should see expected below options")
+    public void theUserShouldSeeExpectedBelowOptions(List<String>HeaderNames) {
+        BrowserUtils.sleep(2);
+        List<String> actualOptions=BrowserUtils.getElementsText(vehicleCostPage.allVehicleCostCheckBoxHeader);
 
+        List<String>actualNameOptions=new ArrayList<>();
+
+        for (int i = 1; i < actualOptions.size()-1; i++) {
+            actualNameOptions.add(actualOptions.get(i));
+
+        }
+        Assert.assertEquals(HeaderNames,actualNameOptions);
+
+
+
+    }
 }
