@@ -5,7 +5,7 @@ Feature: As a user, I should be accessing all the main modules of the app.
   Background: User is already in the log in page
     Given the user is on the login page
 
-
+@B28G30-152
   Scenario Outline: US1AC1TC1 Verify that Store and sales managers should view 8 module names.
     Given the user logged in as "<userType>"
     Then verify the users see below modules
@@ -19,13 +19,13 @@ Feature: As a user, I should be accessing all the main modules of the app.
       | System             |
 
   Examples:
-    | userType             |
-    | sales manager             |
-    | store manager             |
+    | userType      |
+    | sales manager |
+    | store manager |
 
 
-
-  Scenario: US1AC2TC2 Verify that Store and sales managers should view 8 module names.
+@B28G30-153
+  Scenario: US1AC2TC2 Verify that Driver should view 4 module names
     Given the user logged in as "driver"
     Then verify the users see below modules
 

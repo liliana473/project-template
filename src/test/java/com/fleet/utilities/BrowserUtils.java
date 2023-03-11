@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -64,11 +65,7 @@ public class BrowserUtils {
 
     }
 
-    /*
-    This method accepts WebElement target,
-    and waits for that WebElement not to be displayed on the page
-     */
-    public static void waitForInvisibilityOf(WebElement target){
+ static void waitForInvisibilityOf(WebElement target){
         //Create the object of 'WebDriverWait' class, and set up the constructor args
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
@@ -161,7 +158,7 @@ public class BrowserUtils {
      * @return list of string
      */
     public static List<String> getElementsText(List<WebElement> list) {
-        List<String> elemTexts = new ArrayList<>();
+        List<String> elemTexts = new LinkedList<>();
         for (WebElement el : list) {
             elemTexts.add(el.getText());
         }

@@ -13,8 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class US8_StepDefs {
-
-   CalenderEventPage calenderEventPage = new CalenderEventPage();
+    CalenderEventPage calenderEventPage = new CalenderEventPage();
 
     @When("the user click the Create Calendar Event button")
     public void the_user_click_the_create_calendar_event_button() {
@@ -41,7 +40,7 @@ public class US8_StepDefs {
 
     @And("Clear\\(delete) the number {string}")
     public void clearDeleteTheNumber(String valueNumber) {
-       BrowserUtils.waitForVisibility(calenderEventPage.repeatEvery,5);
+        BrowserUtils.waitForVisibility(calenderEventPage.repeatEvery,5);
 
         calenderEventPage.repeatEvery.clear();
 
@@ -57,7 +56,9 @@ public class US8_StepDefs {
 
 
     }
-    }
+}
+
+
 
 
 
