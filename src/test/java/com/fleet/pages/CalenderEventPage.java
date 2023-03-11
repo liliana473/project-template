@@ -9,10 +9,15 @@ public class CalenderEventPage extends BasePage {
     public WebElement createCalenderEvent;
 
     @FindBy(xpath = "//input[@data-name='recurrence-repeat']")
-    public WebElement repeatBox;
+   public WebElement repeatBox;
 
-    @FindBy(xpath = "//input[@class='recurrence-subview-control__number']")
+    @FindBy(xpath = "//div[@class='recurrence-subview-control__item']/label/input[@data-related-field='interval']")
     public WebElement repeatEvery;
+    //input[@class='recurrence-subview-control__number']
+
+ //   @FindBy(xpath = "//input[@placeholder='Enter shortcut action']")
+ //   public WebElement repeatEvery;
+
 
     @FindBy(xpath = "//input[@id='oro_calendar_event_form_allDay-uid-6407d8ca7155c']")
     public WebElement allDayEvent;

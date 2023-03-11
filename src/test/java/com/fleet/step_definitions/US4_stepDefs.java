@@ -19,10 +19,10 @@ public class US4_stepDefs {
     Actions actions = new Actions(Driver.getDriver());
 
     @When("the user navigates to {string} - {string}")
-    public void theUserNavigatesToModule(String tab, String module) {
+    public void theUserNavigatesToModule(String tab,String module) {
 
         dashboardPage.waitUntilLoaderScreenDisappear();
-        dashboardPage.navigateToModule(tab, module);
+        dashboardPage.navigateToModule(tab,module);
         dashboardPage.waitUntilLoaderScreenDisappear();
 
         BrowserUtils.sleep(5);
