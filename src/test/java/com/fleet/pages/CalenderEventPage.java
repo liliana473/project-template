@@ -25,6 +25,13 @@ public class CalenderEventPage extends BasePage {
     @FindBy(xpath = "//span[@class='validation-failed']/span/span")
     public WebElement errorMessage;
 
+    @FindBy(xpath ="//button[@class=\"btn btn-success action-button\"]")
+    public WebElement SaveAndCloseButton;
+
+
+
+    @FindBy(xpath="(//span[@class='validation-failed'])[2]//span/span")
+    public WebElement ErrorMessage1;
 
 
 }
