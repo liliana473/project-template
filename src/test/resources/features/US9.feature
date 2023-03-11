@@ -3,7 +3,7 @@ Feature: As a user, I should see error messages when I enter an invalid integer 
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @wip
+  @B28G30-173
   Scenario: US9AC1TC1 Verify that user can see error messages for entering invalid integers
     Given the user logged in as "store manager"
     When the user navigates to "Activities" - "Calendar Events"
@@ -11,9 +11,9 @@ Feature: As a user, I should see error messages when I enter an invalid integer 
     Then Check the Repeat checkbox
     And Write a number  less than one as 0 in Repeat Every box
     And Click the Save And Close button
-    Then Verify the app displays “The value have not be less than "1".
+    Then Verify the app displays "The value have not to be less than 1."
 
-
+@B28G30-175
   Scenario: US9AC1TC2 Verify that user can see error messages for entering invalid integers
     Given the user logged in as "store manager"
     When the user navigates to "Activities" - "Calendar Events"
@@ -21,4 +21,4 @@ Feature: As a user, I should see error messages when I enter an invalid integer 
     Then Check the Repeat checkbox
     And Write a number  more than ninetynine as 100 Repeat Every box
     And Click the Save And Close button
-    Then Verify the app displays “The value have not be more than "99".
+    Then Verify the app displays "The value have not to be more than 99."

@@ -29,11 +29,9 @@ public class CalenderEventPage extends BasePage {
     public WebElement SaveAndCloseButton;
 
 
-    @FindBy(xpath ="//span[@id='temp-validation-name-1192-error']")
-    public WebElement ErrorMessageLessThan1;
 
-    @FindBy(xpath="//span[@id='temp-validation-name-3038-error']")
-    public WebElement ErrorMessageMoreThan99;
+    @FindBy(xpath="(//span[@class='validation-failed'])[2]//span/span")
+    public WebElement ErrorMessage1;
 
 
 }

@@ -19,9 +19,6 @@ repeatEvery.clear();
 calenderEventPage.repeatEvery.sendKeys(value+"");
 
 
-
-
-
     }
 
     @And("Click the Save And Close button")
@@ -30,14 +27,6 @@ calenderEventPage.repeatEvery.sendKeys(value+"");
       calenderEventPage.SaveAndCloseButton.click();
     }
 
-    @Then("Verify the app displays “The value have not be less than {string}.")
-    public void verifyTheAppDisplaysTheValueHaveNotBeLessThan(String arg0) {
-
-       BrowserUtils.waitForVisibility(calenderEventPage.ErrorMessageLessThan1,5);
-       String actualResult=calenderEventPage.ErrorMessageLessThan1.getText();
-        String expectedResult="The value have not be less than 1.";
-        Assert.assertEquals(actualResult,expectedResult);
-    }
 
     @And("Write a number  more than ninetynine as {int} Repeat Every box")
     public void writeANumberMoreThanRepeatEveryBox(int value) {
@@ -47,13 +36,10 @@ calenderEventPage.repeatEvery.sendKeys(value+"");
     }
 
 
-
-    @Then("Verify the app displays “The value have not be more than {string}.")
-    public void verifyTheAppDisplaysTheValueHaveNotBeMoreThan(String arg0) {
-
-        BrowserUtils.waitForVisibility(calenderEventPage.ErrorMessageMoreThan99,5);
-        String actualResult=calenderEventPage.ErrorMessageMoreThan99.getText();
-        String expectedResult="The value have not be more than 99.";
-        Assert.assertEquals(actualResult,expectedResult);
+    @Then("Verify the app displays {string}")
+    public void verifyTheAppDisplays(String expectedMessage) {
+        BrowserUtils.waitForVisibility(calenderEventPage.ErrorMessage1,10);
+        String actualResult=calenderEventPage.ErrorMessage1.getText();
+        Assert.assertEquals(expectedMessage,actualResult);
     }
 }
