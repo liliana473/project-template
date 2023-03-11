@@ -11,12 +11,12 @@ public class US9_StepDefs extends CalenderEventPage {
 
 
 CalenderEventPage calenderEventPage=new CalenderEventPage();
-    @And("Write a number  less than {string} in Repeat Every box")
-    public void writeANumberLessThanInRepeatEveryBox(String arg0) {
-
+    @And("Write a number  less than one as {int} in Repeat Every box")
+    public void writeANumberLessThanInRepeatEveryBox(int value) {
+BrowserUtils.sleep(3);
 repeatEvery.clear();
-repeatEvery.click();
-calenderEventPage.repeatEvery.sendKeys("0");
+
+calenderEventPage.repeatEvery.sendKeys(value+"");
 
 
 
@@ -39,11 +39,11 @@ calenderEventPage.repeatEvery.sendKeys("0");
         Assert.assertEquals(actualResult,expectedResult);
     }
 
-    @And("Write a number  more than {string} Repeat Every box")
-    public void writeANumberMoreThanRepeatEveryBox(String arg0) {
+    @And("Write a number  more than ninetynine as {int} Repeat Every box")
+    public void writeANumberMoreThanRepeatEveryBox(int value) {
 
         repeatEvery.clear();
-        calenderEventPage.repeatEvery.sendKeys("100");
+        calenderEventPage.repeatEvery.sendKeys(value+"");
     }
 
 

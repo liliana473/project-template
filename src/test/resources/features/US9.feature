@@ -9,7 +9,7 @@ Feature: As a user, I should see error messages when I enter an invalid integer 
     When the user navigates to "Activities" - "Calendar Events"
     And the user click the Create Calendar Event button
     Then Check the Repeat checkbox
-    And Write a number  less than "1" in Repeat Every box
+    And Write a number  less than one as 0 in Repeat Every box
     And Click the Save And Close button
     Then Verify the app displays “The value have not be less than "1".
 
@@ -19,6 +19,6 @@ Feature: As a user, I should see error messages when I enter an invalid integer 
     When the user navigates to "Activities" - "Calendar Events"
     And the user click the Create Calendar Event button
     Then Check the Repeat checkbox
-    And Write a number  more than "99" Repeat Every box
+    And Write a number  more than ninetynine as 100 Repeat Every box
     And Click the Save And Close button
     Then Verify the app displays “The value have not be more than "99".
