@@ -49,7 +49,7 @@ public class US8_StepDefs {
 
     @Then("Verify the app displays “This value should not be blank.”")
     public void verifyTheAppDisplaysThisValueShouldNotBeBlank() {
-        BrowserUtils.waitForVisibility(calenderEventPage.errorMessage,5);
+        BrowserUtils.waitForVisibility(calenderEventPage.errorMessage,10);
         String actualResult=calenderEventPage.errorMessage.getText();
         String expectedResult="This value should not be blank.";
         Assert.assertEquals(actualResult,expectedResult);
