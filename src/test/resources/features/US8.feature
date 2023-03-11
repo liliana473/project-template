@@ -10,7 +10,7 @@ Feature: User want to create a recurring(repetitive) calendar event.
     When the user navigates to "Activities" - "Calendar Events"
     And the user click the Create Calendar Event button
     Then Check the Repeat checkbox
-    And Verify the repeat number is "1"
+     And Verify the repeat number is "1"
 
 @B28G30-154
   Scenario: US8AC2TC2 users clear the repeat day and see an error message
