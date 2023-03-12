@@ -1,8 +1,11 @@
+
+@Emre
 Feature:  As a user, I want to learn how to use the pinbar.
 
   Background: User is already in the log in page
     Given the user is on the login page
 
+  @B28G30-186
   Scenario Outline: US3AC1TC1 Verify users learn how to use the pinbar
     Given the user logged in as "driver"
     When user click the Learn how to use this space message
@@ -12,6 +15,7 @@ Feature:  As a user, I want to learn how to use the pinbar.
       | message1          | message2                                                                                       |
       | How To Use Pinbar |Use pin icon on the right top corner of page to create fast access link in the pinbar.|
 
+  @B28G30-187
   Scenario: US3AC1TC2  VERIFY users see an image on the pinbar page
     Given the user logged in as "driver"
     When user click the Learn how to use this space message
