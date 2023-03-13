@@ -40,12 +40,22 @@ public class Driver {
             switch statement will determine the "case", and open the matching browser.
              */
             switch (browserType){
-                case "chrome":
+               /* case "chrome":
                     //WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
                     driverPool.get().manage().window().setSize(new Dimension(1980,1020));
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-                    break;
+                    break;*/
+
+                //WebDriverManager.chromedriver().setup();//if we use selenium 3. we need to use Webdriver manager
+                case "chrome":
+                ChromeOptions options=new ChromeOptions();//i added this line from Adams video for dont have 403 error code
+                options.addArguments("--remote-allow-origins=*");//this line also from adam
+                driverPool.set(new ChromeDriver(options));//i add inside chrome driver (options) from adams video
+                driverPool.get().manage().window().setSize(new Dimension(1980,1020));
+                driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                break;
+
                 case "firefox":
                     //WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
